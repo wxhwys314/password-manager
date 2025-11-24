@@ -1,0 +1,101 @@
+.main_content {
+    display: flex;
+    width: 100%;
+}
+.side_nav {
+    width: 15%;
+    height: calc(100% - 60px);
+    background-color: white;
+    position: absolute;
+    top: 60px;
+    box-shadow: var(--bs-box-shadow-sm) !important;
+    overflow-y: auto;
+    & .category {
+        margin-bottom: 20px;
+        height: 70px;
+        width: 100%;
+        text-align: center;
+        & h4 a {
+            line-height: 70px;
+            display: inline-block;
+            color: gray;
+            text-decoration: none;
+            transition: color 0.2s ease, transform 0.2s ease;
+            &:hover {
+                color: black;
+                transform: scale(1.1);
+            }
+        }
+    }
+    & .active {
+        background-color: lightgray;
+        & h4 a {
+            color: black;
+        }
+    }
+}
+.password_list {
+    width: calc(85% - 40px);
+    position: absolute;
+    left: calc(15% + 20px);
+}
+#message_alert {
+    position: fixed;
+    width: 400px;
+    right: 20px;
+    bottom: 0;
+}
+.hidden {
+    cursor: pointer;
+    display: flex;
+}
+.password {
+    cursor: pointer;
+    display: none;
+}
+.open_side_nav_button, .close_side_nav_button {
+    display: none !important;
+}
+
+/*mobile layout*/
+@media screen and (max-width: 768px) {
+    .main_content {
+        flex-direction: column;
+    }
+    .side_nav {
+        display: none;
+        z-index: 999;
+        position: absolute;
+        height: 100%;
+        width: 60%;
+        top: 0;
+        .close_side_nav_button {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 40px;
+            height: 40px;
+        }
+    }
+    .password_list {
+        width: 100%;
+        position: relative;
+        left: 0;
+    }
+    .open_side_nav_button {
+        display: flex !important;
+        position: absolute;
+        right: 10;
+        top: 0;
+    }
+    .close_side_nav_button {
+        display: block !important;
+    }
+}
+
+/**/
+@media screen and (min-width: 768px) {
+    .side_nav {
+        display: block !important;
+    }
+}
