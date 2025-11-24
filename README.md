@@ -22,7 +22,7 @@ Change master password: Login->Defaut User->Wachtwoord Wijzigen
 To install the project, run the following commands:
 
 ```bash
-git clone https://github.com/tallandcollege/wachtwoord-manager-wxhwys314.git
+git clone https://github.com/wxhwys314/password-manager.git
 cd wachtwoord_manager
 npm install
 
